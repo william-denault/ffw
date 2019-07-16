@@ -13,7 +13,7 @@ Using the 'devtools' package:
 ```{r , eval=FALSE}
 install.packages( "devtools" )
 library( devtools )
-install_github( "william-denault/WaveletScreaming" )
+install_github( "william-denault/ffw" )
 ```
 
 Soon on CRAN
