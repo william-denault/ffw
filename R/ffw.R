@@ -211,7 +211,7 @@ ffw <- function(Y,signal,pos,confounder,lev_res,sigma_b,para=FALSE,betas=FALSE)
 
   # workaround for git issue #1 - mysteriously empty slices
   if(is.null(dim(signal)) || dim(signal)[1] < 2^lev_res || dim(signal)[2] < 2){
-  	print("Warning: not enough signalss remaining, returning empty output")
+  	print("Warning: not enough signals remaining, returning empty output")
 
     # Naming the output
     names_BF <- c("BF_0_0")
