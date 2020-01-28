@@ -1,7 +1,7 @@
 Package: ffw
 Type: Package
 Title: A package to perform Fast functional association analysis based on wavelets
-Version: 0.1.2
+Version: 0.1.21
 Author: William Denault
 Maintainer: William Denault <william.denault@gmail.com>
 Description: Functions to perform fast functional association analysis based on wavelets
