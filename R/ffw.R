@@ -130,7 +130,7 @@ ffw <- function(Y,signal,pos,confounder,lev_res,sigma_b,para=FALSE,betas=FALSE)
 
   #To ensure the length not to be 0
   Y <- as.vector(Y)
-  sigma_b <- sigma_b
+
 
   # INPUT CHECKS
   print("Input dimensions:")
@@ -194,7 +194,7 @@ ffw <- function(Y,signal,pos,confounder,lev_res,sigma_b,para=FALSE,betas=FALSE)
   Y <- Y[nonmissing_index]
   confounder <- confounder[nonmissing_index,]
   signal <- signal[,nonmissing_index]
-
+  sigma_b <- 10*sigma_b
   print(paste("N individuals analysed = ", dim(signal)[2],
   			", N SNPs analysed = ",dim(signal)[1]))
 
