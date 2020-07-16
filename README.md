@@ -1,5 +1,5 @@
 
-## Wavelet Screaming: a tutorial
+## Fast Function wavelet: a tutorial
 
 
 
