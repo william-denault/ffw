@@ -14,5 +14,5 @@ Depends:
     wavethresh (>= 4.6.8),
     ggplot2 (>= 2.2.1)
 RoxygenNote: 7.0.2
-Suggests: knitr, rmarkdown, data.table, fExtremes (>= 3042.82)
+Suggests: knitr, rmarkdown, data.table, fExtremes 
 VignetteBuilder: knitr

@@ -7,14 +7,14 @@
 #'@param lev_res the maximum level of resolution needed
 #'@param sigma_b the parameter of the NIG prior used for the Bayes Factor computation. We advised to set this value between 0.1 and 0.2
 #'@param para logical parameter for parallelisation, if not specified set at FALSE.
-#'@details The ffw function computes the Likelihood ratio used for testing significance of a genetic region. In addition it computes
-#'the porportion of wavelets coefficients associated by level of resolution, and the Bayes factor used for this estimation. All the details
-#'of the computation can be found in our paper "Wavelet Screaming: a novel look to GWAS data"
+#'@details The ffw function computes the Likelihood ratio used for testing significance of a genetic region. In addition it computes the porportion of wavelets coefficients associated by level of resolution, and the Bayes factor used for this estimation.
 #'@return A named vector. First position the estimated value of the Lambda statistics, then the proportion of association per level of resolution then the computed Bayes Factor per wavelet coefficient.
+#'@references Shim and Stephens,Wavelet-based genetic association analysis of functional phenotypes arising from high-thoughput sequencing asssays,The Annals of Applied Statistics, 2015, Vol. 9, No. 2, 665–686
+#'@export
 #'@examples \dontrun{
 #'
 #'
-#'set.seed(666)
+#'set.seed(66)
 #'#########################################
 #'#Generate a randomly sample signal size=1Mb
 #'#########################################
@@ -112,7 +112,7 @@
 #'#Visualisation
 #'##############
 #'pos <- c(min(my_pos),max(my_pos))
-#'plot_WS(res=res,pos=pos,lev_res=6)
+#'plot_ffw(res=res,pos=pos,lev_res=6)
 #'
 #'
 #'}

@@ -28,15 +28,16 @@ A named vector. First position the estimated value of the Lambda statistics, the
 Perform a screening of a signal for a given phenotype and a specified level of resolution
 }
 \details{
-The ffw function computes the Likelihood ratio used for testing significance of a genetic region. In addition it computes
-the porportion of wavelets coefficients associated by level of resolution, and the Bayes factor used for this estimation. All the details
-of the computation can be found in our paper "Wavelet Screaming: a novel look to GWAS data"
+The ffw function computes the Likelihood ratio used for testing significance of a genetic region. In addition it computes the porportion of wavelets coefficients associated by level of resolution, and the Bayes factor used for this estimation.
+}
+\references{
+Shim and Stephens,Wavelet-based genetic association analysis of functional phenotypes arising from high-thoughput sequencing asssays,The Annals of Applied Statistics, 2015, Vol. 9, No. 2, 665–686
 }
 \examples{
 \dontrun{
 
 
-set.seed(666)
+set.seed(66)
 #########################################
 #Generate a randomly sample signal size=1Mb
 #########################################
@@ -127,26 +128,16 @@ val <- res["Lambda"]
 
 pval <-c(length(Sim_gam[which(Sim_gam>val)])+1)/(length(Sim_gam)+1)
 pval
-
-#Via EVT
-#Should be preferred for smaller values of Lambda
-
-library(fExtremes)
-x <-  Sim_gam
-#Selecting the threshold
-thresh <- min(  max (c( 2.5*mean( Sim_Gamma) , quantile(Sim_Gamma,0.98)) ), quantile(Sim_Gamma,0.97))
-z = gpdFit(x, u = thresh , type = "mle")
-z
-pval <- 1-fExtremes::pgpd(q=res["Lambda"], xi=z@fit$par.ests["xi"], mu=z@parameter$u, beta=z@fit$par.ests["beta"])
-pval
+#'pval
 
 
 ##############
 #Visualisation
 ##############
 pos <- c(min(my_pos),max(my_pos))
-plot_WS(res=res,pos=pos,lev_res=6)
+plot_ffw(res=res,pos=pos,lev_res=6)
 
 
 }
 }
+
