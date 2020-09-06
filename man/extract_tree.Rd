@@ -2,7 +2,7 @@
 % Please edit documentation in R/extract_tree.R
 \name{extract_tree}
 \alias{extract_tree}
-\title{Extract sub result from result of the wavelet_screaming}
+\title{Extract sub result from result of the ffw}
 \usage{
 extract_tree(res, lev_res, thresh)
 }
@@ -22,7 +22,7 @@ Function to performed zoomed analysis of the wavelet screaming output
 \examples{
 \dontrun{
 
-#using res for the Wavelet_screaming exemple
+#using res for the ffw exemple
 
 
 sub_analysis <- function(res, lev_res )

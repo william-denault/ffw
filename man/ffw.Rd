@@ -30,9 +30,6 @@ Perform a screening of a signal for a given phenotype and a specified level of r
 \details{
 The ffw function computes the Likelihood ratio used for testing significance of a genetic region. In addition it computes the porportion of wavelets coefficients associated by level of resolution, and the Bayes factor used for this estimation.
 }
-\references{
-Shim and Stephens,Wavelet-based genetic association analysis of functional phenotypes arising from high-thoughput sequencing asssays,The Annals of Applied Statistics, 2015, Vol. 9, No. 2, 665–686
-}
 \examples{
 \dontrun{
 
@@ -140,4 +137,6 @@ plot_ffw(res=res,pos=pos,lev_res=6)
 
 }
 }
-
+\references{
+Shim and Stephens,Wavelet-based genetic association analysis of functional phenotypes arising from high-thoughput sequencing asssays,The Annals of Applied Statistics, 2015, Vol. 9, No. 2, 665–686
+}

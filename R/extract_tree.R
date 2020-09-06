@@ -1,4 +1,4 @@
-#'@title Extract sub result from result of the wavelet_screaming
+#'@title Extract sub result from result of the ffw
 #'@description  Function to performed zoomed analysis of the wavelet screaming output
 #'@param res Output of Wavelet_screaming.
 #'@param lev_res the maximum level of resolution needed, has to be less or equal to the request level of resolution in the Wavelet_screaming.
@@ -6,7 +6,7 @@
 #'@return A vector correpsonding of the sub tree for the zoomed analysis.
 #'@examples \dontrun{
 #'
-#'#using res for the Wavelet_screaming exemple
+#'#using res for the ffw exemple
 #'
 #'
 #'sub_analysis <- function(res, lev_res )
