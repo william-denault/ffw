@@ -1,15 +1,15 @@
-#'@title Data visualisation for ffw output
-#'@description  Data visualisation of ffw screening results
+#'@title Data visualization for ffw output
+#'@description  Data visualization of ffw screening results
 #'@param res Output of ffw, without Betas.
-#'@param bp a vector of the base pairs position of the loci, you can provide only the starting point and the end point of the loci. If missing set as 0, 1.
+#'@param bp a vector of the base pairs position of the loci, you can provide only the starting point and the endpoint of the loci. If missing set as 0, 1.
 #'@param lev_res the maximum level of resolution needed, has to be less or equal to the request level of resolution in the ffw function.
 #'@param fill logical, if not provide set as TRUE.
-#'@param dg numerical, the number of digits display on the x axe. If missing set at 3.
+#'@param dg numerical, the number of digits displayed on the x axes. If missing set at 3.
 #'@param  BF_lev Level of Bayes Factor use to overlay regions. IF missing set as 1.
 #'@return return a ggplot
-#' @details The function generate a ggplot from the ffw function output. It represents the Bayes factor for the different levels scales of the wavelets decomposition.
-#'The size and the darkness of the points that represent the Bayes factor are scaled by the value of the Bayes factors.
-#'If a Bayes factor is greater than 1 then the region that represent the Bayes factor is filled up in order to give an orverview of the size and the origin of the genetic signal.
+#' @details The function generates a ggplot from the ffw function output. It represents the Bayes factor for the different levels scales of the wavelets decomposition. The value of the Bayes factors scales
+# 'The size and the darkness of the points that represent the Bayes factor.
+#' If a Bayes factor is greater than 1, then the region that represents the Bayes factor is filled up to give an overview of the size and the origin of the genetic signal.
 #'@seealso \code{\link{ffw}}
 
 plot_ffw <- function(res,bp,lev_res,fill,dg,BF_lev)
