@@ -1,10 +1,10 @@
 #'@title Simulation of Lambda null distribution
 #'@description  Simulation of Lambda null distribution.
-#'@param nsimu number of simulation to perform.
+#'@param nsimu number of simulations to perform.
 #'@param lambda the lambda parameter of the null distribution of the Bayes Factor.
 #'@param lev_res the maximum level of resolution needed.
-#'@param ncp the lambda parameter of the null distribution of the Bayes Factor, if not specified set at 0.
-#'@details Use the theoretical null distribution of the generated Bayes factor to perform simulation of null distriution of the test statistics of the Wavelet screaming procedure.
+#'@param ncp the lambda parameter of the Bayes Factor's null distribution, if not specified set at 0.
+#'@details Use the theoretical null distribution of the generated Bayes factor to perform a simulation of null distribution of the test statistics of the Wavelet screaming procedure's test statistics.
 #'@references Quan Zhou and Yongtao Guan, On the Null Distribution of Bayes Factors in linear Regression, Journal of the American Statistical Association, 518, 2017.
 #'@seealso \code{\link{Wavelet_screaming}}
 #'@export
@@ -12,9 +12,6 @@
 #'set.seed(1)
 #'Simu_Lambda_null(100,0.7,2)
 #'}
-
-
-
 
 
 
