@@ -1,14 +1,14 @@
 #'@title Compute Beta value from Bayesian linear regression
 #'@description  Compute Beta value from Bayesian linear regression
-#'@param y phenotype vector/variable of interest, has to be numeric.
+#'@param y phenotype vector/variable of interest has to be numeric.
 #'@param x numerical, variable to regress on.
-#'@param confounder the confounding matrix with the same sample order as Y. The intercept should not be included, if missing will generate a intercept matrix.
-#'@param sigma_b the parameter of the NIG prior used for the Bayes Factor computation. We advised to set this value between 0.1 and 0.2
-#'@param all logical, if set as TRUE return all the Beta value (including the ones form the confounding factors). If set as FALSE only return the estimate for x, set as FALSE if missing.
-#'@details The Wavelet_screaming function computes the Likelihood ratio used for testing significance of a genetic region. In addition it computes
-#'the porportion of wavelets coefficients associated by level of resolution, and the Bayes factor used for this estimation. All the details
-#'of the computation can be found in our paper "Wavelet Screaming: a novel look to GWAS data"
-#'@return A named vector. First position the estimated value of the Lambda statistics, then the proportion of association per level of resolution then the computed Bayes Factor per wavelet coefficient.
+#'@param confounder the confounding matrix with the same sample order as Y. The intercept should not be included. If missing will generate an intercept matrix.
+#'@param sigma_b the parameter of the NIG prior used for the Bayes Factor computation. We advised setting this value between 0.1 and 0.2
+#'@param all logical, if set as TRUE return all the Beta value (including the ones from the confounding factors). If set as FALSE, only return the estimate for x, set as FALSE if missing.
+#'@details The Wavelet_screaming function computes the Likelihood ratio used for testing the significance of a genetic region. In addition, it computes
+#'the proportion of wavelets coefficients associated by the level of resolution, and the Bayes factor used for this estimation. All the details
+#'of the computation can be found in our paper "Detecting differentially methylated regions using a fast wavelet-based approach to functional association analysis" Denault and Jugessur
+#'@return A named vector. First position, the estimated value of the Lambda statistics, then the proportion of association per level of resolution then the computed Bayes Factor per wavelet coefficient.
 #'@examples \dontrun{
 #'
 #'x <- rnorm(1000)
