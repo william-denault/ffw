@@ -1,11 +1,11 @@
 #'@title Compute lambda1 for BF null distribution
-#'@description Compute the lambda parameter of the Bayes factors null distribution. Using the standard SVD R routine.
+#'@description Compute the lambda parameter of the Bayes factors null distribution. We use the standard SVD R routine.
 #'@param Y a vector of the variable of interest.
-#'@param confounder the confounding matrix with same a number of line equal to the length of Y. The intercept should not be included, if missing will generate a intercept matrix.
+#'@param confounder the confounding matrix with the same number of lines as the length of Y. The intercept should not be included. If missing will generate an intercept matrix.
 #'@param sigma_b value of the prior used in the Wavelet screaming.
 #'@export
 #'@references Quan Zhou and Yongtao Guan, On the Null Distribution of Bayes Factors in linear Regression, Journal of the American Statistical Association, 518, 2017.
-#'@details Compute the lambda parameter of the Bayes factors distribution using its closed form which is provided in the paper of Quan Zhou and Yongtao Guan.
+#'@details Compute the lambda parameter of the Bayes factors distribution using its closed-form, which is provided in the paper of Quan Zhou and Yongtao Guan.
 #'@seealso \code{\link{get_ncp}}
 #'@examples \dontrun{
 #'Y <- rnorm(n=1000)
