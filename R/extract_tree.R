@@ -1,12 +1,12 @@
-#'@title Extract sub result from result of the ffw
+#'@title Extract sub result from results of the ffw function
 #'@description  Function to performed zoomed analysis of the wavelet screaming output
 #'@param res Output of Wavelet_screaming.
 #'@param lev_res the maximum level of resolution needed, has to be less or equal to the request level of resolution in the Wavelet_screaming.
-#'@param thresh Minimal value of the Bayes Factor to  defined the a sub region, if missing set as 1.
+#'@param thresh Minimal value of the Bayes Factor to defined a sub-region, if missing set as 1.
 #'@return A vector correpsonding of the sub tree for the zoomed analysis.
 #'@examples \dontrun{
 #'
-#'#using res for the ffw exemple
+#'#using res for the ffw example
 #'
 #'
 #'sub_analysis <- function(res, lev_res )
