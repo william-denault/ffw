@@ -1,12 +1,11 @@
-#'@title Analytical pvalue for for loci with only one Bayes Factor over a threshold
-#'@title Analytical pvalue for for loci with only one Bayes Factor over a threshold
-#'@description  Compute the analytical pvalue for for loci with only one Bayes Factor over a threshold
-#'@param nsimu number of simulation to perform.
+#'@title Analytical pvalue for loci with only one Bayes Factor over a threshold
+#'@title Analytical pvalue for loci with only one Bayes Factor over a threshold
+#'@description  Compute the analytical pvalue for loci with only one Bayes Factor over a threshold
+#'@param nsimu number of simulations to perform.
 #'@param lambda the lambda parameter of the null distribution of the Bayes Factor.
 #'@param lev_res the maximum level of resolution needed.
-#'@param ncp the lambda parameter of the null distribution of the Bayes Factor, if not specified set at 0.
-#'@details Use the theoretical null distribution of the generated Bayes factor to perform simulation of null distriution of the test statistics of the Wavelet screaming procedure.
-
+#'@param ncp the lambda parameter of the Bayes Factor's null distribution, if not specified set at 0.
+#'@details Use the theoretical null distribution of the generated Bayes factor to perform simulation of null distribution of the Wavelet screaming procedure's test statistics.
 
 
 analytical_p <- function(sub,lambda,ncp,thresh )
