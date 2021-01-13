@@ -1,15 +1,15 @@
 #'@title Main function to perform Fast functional association analysis based on wavelet
 #'@description  Perform a screening of a signal for a given phenotype and a specified level of resolution
-#'@param Y phenotype vector, has to be numeric. For case control code it as 0 and 1.
-#'@param signal signals matrix (either data.frame or numeric matrix). Lines=SNPs in increasing order in term of base pair, columns=individuals. No missing values allowed.
-#'@param pos vector of spatial position of the variables. It has to be in the same order and length than the signal line order/length.
-#'@param confounder the confounding matrix with the same sample order as Y. The intercept should not be included, if missing will generate a intercept matrix.
+#'@param Y phenotype vector, has to be numeric. For case-control code, it as 0 and 1.
+#'@param signal signals matrix (either data.frame or numeric matrix). Lines=SNPs in increasing order in terms of base pair, columns=individuals. No missing values are allowed.
+#'@param pos vector of spatial position of the variables. It has to be in the same order and length as the signal line order/length.
+#'@param confounder the confounding matrix with the same sample order as Y. The intercept should not be included. If missing will generate an intercept matrix.
 #'@param lev_res the maximum level of resolution needed
-#'@param sigma_b the parameter of the NIG prior used for the Bayes Factor computation. We advised to set this value between 0.1 and 0.2
-#'@param para logical parameter for parallelisation, if not specified set at FALSE.
-#'@details The ffw function computes the Likelihood ratio used for testing significance of a genetic region. In addition it computes the porportion of wavelets coefficients associated by level of resolution, and the Bayes factor used for this estimation.
-#'@return A named vector. First position the estimated value of the Lambda statistics, then the proportion of association per level of resolution then the computed Bayes Factor per wavelet coefficient.
-#'@references Shim and Stephens,Wavelet-based genetic association analysis of functional phenotypes arising from high-thoughput sequencing asssays,The Annals of Applied Statistics, 2015, Vol. 9, No. 2, 665–686
+#'@param sigma_b the parameter of the NIG prior used for the Bayes Factor computation. We advised setting this value between 0.1 and 0.2
+#'@param para logical parameter for parallelization, if not specified, set at FALSE.
+#'@details The ffw function computes the Likelihood ratio used for testing the significance of a genetic region. It computes the proportion of wavelet coefficients associated with the resolution level and the Bayes factor used for this estimation.
+#'@return A named vector. First, position the estimated value of the Lambda statistics, then the proportion of association per level of resolution, then the computed Bayes Factor per wavelet coefficient.
+#'@references Shim and Stephens, Wavelet-based genetic association analysis of functional phenotypes arising from high-throughput sequencing assays, The Annals of Applied Statistics, 2015, Vol. 9, No. 2, 665–686
 #'@export
 #'@examples \dontrun{
 #'
@@ -120,15 +120,7 @@
 
 ffw <- function(Y,signal,pos,confounder,lev_res,sigma_b,para=FALSE,betas=FALSE)
 {
-  #signal: signals matrix, line=SNP order in increasing pos, column individual genoype
-  #pos: position of the SNP in term of base pair
-  #confounder: designed matrix of the confounding effect size = n,c
-  #n= n ind, c= number of confounder
-  #lev_res: lev of resolution for the wavelet filtering
-  #sigma_b= Para of prior, should be <1 advised 0.2
 
-
-  #To ensure the length not to be 0
   Y <- as.vector(Y)
 
 
@@ -198,7 +190,7 @@ ffw <- function(Y,signal,pos,confounder,lev_res,sigma_b,para=FALSE,betas=FALSE)
   print(paste("N individuals analysed = ", dim(signal)[2],
   			", N SNPs analysed = ",dim(signal)[1]))
 
-  # workaround for git issue #1 - mysteriously empty slices
+
   if(is.null(dim(signal)) || dim(signal)[1] < 2^lev_res || dim(signal)[2] < 2){
   	print("Warning: not enough signals remaining, returning empty output")
 
