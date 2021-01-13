@@ -1,5 +1,5 @@
 
-## Fast Function wavelet: a tutorial
+
 
 
 
