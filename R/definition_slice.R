@@ -1,23 +1,22 @@
-#'@title Define chromosomal regions for screening
-#'@description  Define overlapping loci starting and ending positions for Wavelet screaming analysis
-#'@param bp vector of the observed based pair positions in a chromosome
-#'@param Loci_size size of the defined loci, limited by thresh size gaps on ends. Slices smaller than Loci_size will be skipped.
-#'@param thresh maximal distance between two SNP within a loci. E.g 10000
-#'@param Chr the chromosome's number where the slicing is made. By default set as NA
-#'@export
-#'@examples \dontrun{
-#'Loci_size=1000000
-#'thresh=10000
-#'temp <- runif(n = 50000,min=1,max=10050)
-#'for (i in 2:length(temp))
-#'{
-#'  temp[i] <- temp[i]+temp[i-1]
+#'@title Define chromosomal regions for screening	 
+#'@description Define overlapping loci starting and ending positions for Wavelet screaming analysis	 
+#'@param bp vector of the observed based pair positions in a chromosome	 
+#'@param Loci_size size of the defined loci. Slices smaller than Loci_size will be skipped.	 
+#'@param thresh maximal distance between two SNP within a loci. E.g 10000	 
+#'@param Chr the chromosome's number where the slicing is made. By default, set as NA	 
+#'@export	 
+#'@examples \dontrun{	 
+#'Loci_size=1000000	 
+#'thresh=10000	 
+#'temp <- runif(n = 50000,min=1,max=10050)	 
+#'for (i in 2:length(temp))	  
+#'{	  
+#' temp[i] <- temp[i]+temp[i-1]	  
+#'}	   
+#'bp <- temp	 
+#'df <-slice_definition(bp=bp,Loci_size=Loci_size,thresh = thresh ,Chr=5)	 
+#'head(df)	 
 #'}
-#'bp <- temp
-#'df <-slice_definition(bp=bp,Loci_size=Loci_size,thresh = thresh ,Chr=5)
-#'head(df)
-#'}
-
 slice_definition <- function(bp,Loci_size=1e6,thresh=1e4,Chr=NA)
 {
   if(!is.vector(bp) | !is.numeric(bp)){
