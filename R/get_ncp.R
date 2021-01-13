@@ -1,12 +1,12 @@
 #'@title Compute ncp for BF null distribution
-#'@description  Compute non central parameter of the Bayes factors distribution.
+#'@description  Compute non-central parameter of the Bayes factors distribution.
 #'@param Y a vector of the variable of interest.
-#'@param Counfounder the counfounding matrix with same a number of line equal to the length of Y. The intercept should not be included, if missing will generate a intercept matrix.
-#'@param WCs the vector of a specific wavelet coefficient for each inidivual.
+#'@param Counfounder the confounding matrix with the same number of lines as the length of Y. The intercept should not be included. If missing will generate an intercept matrix.
+#'@param WCs the vector of a specific wavelet coefficient for each individual.
 #'@param sigma_b value of the prior used in the Wavelet screaming.
 #'@export
 #'@references Quan Zhou and Yongtao Guan, On the Null Distribution of Bayes Factors in linear Regression, Journal of the American Statistical Association, 518, 2017.
-#'@details Compute non central parameter of the Bayes factors distribution using its closed form which is provided in the paper of Quan Zhou and Yongtao Guan.
+#'@details Compute non-central parameter of the Bayes factors distribution using its closed-form, which is provided in the paper of Quan Zhou and Yongtao Guan.
 #'@seealso \code{\link{get_lambda1}}
 #'@examples \dontrun{
 #'Y <- rnorm(n=1000)
@@ -20,9 +20,7 @@
 
 get_ncp <- function( Y,Counfounder, WCs,sigma_b ){
 
-  #Y phenotype
-  #Counfounder= Counfounding matrix
-  #WCs= the wavelets coefficients
+
 
   if(missing(Counfounder))
   {
