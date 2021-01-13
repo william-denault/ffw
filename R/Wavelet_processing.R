@@ -10,13 +10,11 @@ wavproc <- function(Time01,y,lev_res)
   mygrid <- wavethresh::makegrid(t=Time01,y=y)
   LDIRWD <- irregwd(mygrid,filter.number=1)
   class(LDIRWD) <- "wd"
-  #Theoritical work here
+ 
   myThres <- threshold(LDIRWD,policy = "universal",type="soft",dev = madmad,levels = 1:(LDIRWD$nlevels-1))
 
 
-  # Not nice
-  # should be like unlist(lapply(1:lev_res,my_WCs_lev))
-  #but pb for the moment
+ 
 
   res <- c()
   for( i in 0: lev_res)
