@@ -1,5 +1,5 @@
 #'@title Internal wavelet processing
-#'@description  Internal function perform a wavelet transform and thresholding
+#'@description  Internal function, perform a wavelet transform and thresholding
 #'@param Time01 rescalled measurment positions (ordered)
 #'@param y the signal
 #'@param lev_res the maximum level of resolution needed
